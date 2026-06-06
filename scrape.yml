@@ -2,11 +2,8 @@ name: PM Job Tracker
 
 on:
   schedule:
-    # Runs every 6 hours: 12am, 6am, 12pm, 6pm IST (subtract 5:30 for UTC)
-    - cron: "30 0 * * *"   # 6:00 AM IST
-    - cron: "30 6 * * *"   # 12:00 PM IST
-    - cron: "30 12 * * *"  # 6:00 PM IST
-    - cron: "30 18 * * *"  # 12:00 AM IST (next day)
+    # Runs every 3 hours
+    - cron: '0 */3 * * *'   
   workflow_dispatch:        # Allow manual trigger from GitHub UI
 
 jobs:
